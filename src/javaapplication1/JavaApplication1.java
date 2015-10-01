@@ -9,15 +9,19 @@ public class JavaApplication1 {
      */
     public static void main(String[] args) {
 
-        int[] vector = {1, 1, 1, 3, 4, 5, 6, 9, 100,100,-4,-4};
+        Integer[] vector = {1, 1, 1, 3, 4, 5, 6, 9, 100,100,-4,-4};
 
-        Histogram histo = new Histogram(vector);
-        HashMap<Integer, Integer> histogram = histo.getHito();
+        String [] vector1 = {"Ana", "Juan", "Pedro", "Lucia","Ana", "Juan","Ana", "Juan"};
+        
+        
+        //Histogram histo = new Histogram(vector1);
+Histogram <String> histogram = CalculaHistogram.computeHisto(vector1);
+        
 
 
    
 
-        for (Integer key : histogram.keySet()) {
+        for (Object key : histogram.keySet()) {
             System.out.println(key+ " : "+ histogram.get(key));
         }
         // TODO code application logic here
