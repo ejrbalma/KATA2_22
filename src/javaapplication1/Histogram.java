@@ -1,11 +1,13 @@
 package javaapplication1;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
-public class Histogram <T> {
+
+public class Histogram <T>  {
  
-    private final HashMap<T,Integer> map = new HashMap <>();
+    private final Map <T,Integer> map = new HashMap<>();
 
     public Integer get(Object key) {
         return map.get(key);
@@ -15,11 +17,8 @@ public class Histogram <T> {
         return map.keySet();
     }
 
-    public Integer increment (T key) {
-        
-        return map.put(key,map.containsKey(key) ? map.put(key, map.get(key))+1 : 1);
-    }
+    public Integer increment (T key){
     
-    
-    
+    return map.put(key,map.containsKey(key) ? map.get(key)+1 :1);
+            }
 }
